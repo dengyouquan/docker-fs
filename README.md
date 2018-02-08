@@ -22,6 +22,10 @@ or you can download docker image to <https://dev.aliyun.com>.
 
 `docker pull registry.cn-hangzhou.aliyuncs.com/dengyouquan/git-fs:fs-embedmongo-ubuntu.`
 
+`docker run -d -p 8082:8082 [image_id]` ]
+or
+`docker run -d -p 8082:8082 registry.cn-hangzhou.aliyuncs.com/dengyouquan/git-fs:fs-embedmongo-ubuntu`
+
 this is a complete image,and it contains embedmongo,you don't need to have a mongodb.
 
 这个镜像是完整的，可以pull下来直接运行，不需要自己去安装一个mongodb.
@@ -31,5 +35,8 @@ this is a complete image,and it contains embedmongo,you don't need to have a mon
 you need to have a mongodb,and in 27017.Because i use
 `spring.data.mongodb.host=www.dengyouquan.cn`,you don't need mongodb.
 
+`docker run -d -p 8083:8083 [image_id]`
+or
+`docker run -d -p 8083:8083 registry.cn-hangzhou.aliyuncs.com/dengyouquan/git-fs:fs-mongo-alpine`
 
 这个镜像不完整，需要你自己安装mongodb.但是我的配置用了我服务器的mongodb，所以不需要你mongodb.
